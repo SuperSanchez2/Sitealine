@@ -109,3 +109,12 @@ body {
         opacity: 1;
     }
 }
+.assinatura {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #a36c84;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
