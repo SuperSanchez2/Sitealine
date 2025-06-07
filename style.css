@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(to bottom, #ffe4e9, #ffc1d9); /* Gradiente rosa */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4a3f35;
+    margin: 0;
+    overflow-x: hidden; /* Evita barra horizontal */
+}
+
+
+.container {
+    background-color: #fff8e1;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f48fb1; /* Rosa claro */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #ec407a; /* Rosa mais escuro no hover */
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.coracao {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    color: #ff6b81;
+    animation: cair linear infinite;
+    pointer-events: none;
+}
+.carrossel {
+    width: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.fotos {
+    display: flex;
+    animation: deslizar 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Apenas metade, pois duplicamos */
+}
+
+.mensagem-final {
+    margin-top: 60px;
+    background-color: #ffe4ec;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .fotos img {
+        height: 250px;
+        margin-right: 20px;
+    }
+
+    .mensagem-final {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+.container, .mensagem-final, .carrossel {
+    opacity: 0;
+    animation: aparecer 2s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}

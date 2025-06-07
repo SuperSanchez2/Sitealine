@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Feliz Dia dos Namorados!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Oi, Amor! ❤️❤️❤️</h1>
+        <p>Fiz esse site com muito carinho, só para você.</p>
+        <p>Feliz Dia dos Namorados!</p>
+    </div>
+
+    <div id="historia" class="container">
+        <h2>Nossa História 💕</h2>
+        <p>Gabriel e Aline</p>
+        <p>Nos conheceos em um momento especial, e desde então cada dia ao seu lado é uma nova aventura.</p>
+        <p>Você me inspira com seu amor pelos animais, seu carinho e sua força.</p>
+        <p>Este site é só uma pequena forma de mostrar o quanto você é importante pra mim.</p>
+    </div>
+    <script>
+    // Gera corações animados
+    setInterval(() => {
+        const coracao = document.createElement("div");
+        coracao.className = "coracao";
+        coracao.textContent = "❤️";
+        coracao.style.left = Math.random() * 100 + "vw";
+        coracao.style.animationDuration = (2 + Math.random() * 3) + "s";
+        document.body.appendChild(coracao);
+
+        setTimeout(() => {
+            coracao.remove();
+        }, 5000);
+    }, 300);
+</script>
+<div class="carrossel">
+  <div class="fotos">
+    <img src="fotos/foto1.jpg.jpg" alt="Foto 1">
+    <img src="fotos/foto2.jpg.jpg" alt="Foto 2">
+    <img src="fotos/foto4.jpg.jpg" alt="Foto 3">
+    <img src="fotos/foto5.jpg.jpg" alt="Foto 4">
+    <img src="fotos/foto3.jpg.jpg" alt="Foto 5">
+    <img src="fotos/foto6.jpg.jpg" alt="Foto 6">
+
+    <!-- Cópia das mesmas imagens para looping suave -->
+    <img src="fotos/foto1.jpg.jpg" alt="Foto 1 duplicada">
+    <img src="fotos/foto2.jpg.jpg" alt="Foto 2 duplicada">
+    <img src="fotos/foto4.jpg.jpg" alt="Foto 3 duplicada">
+    <img src="fotos/foto5.jpg.jpg" alt="Foto 4 duplicada">
+    <img src="fotos/foto3.jpg.jpg" alt="Foto 5 duplicada">
+    <img src="fotos/foto6.jpg.jpg" alt="Foto 6 duplicada">
+  </div>
+</div>
+
+<div class="mensagem-final">
+    <h2>Para o amor da minha vida 💖</h2>
+    <p>
+        <!-- Escreva aqui sua mensagem completa -->
+        Aline, você é a razão dos meus sorrisos e do meu coração bater mais forte. Cada momento ao seu lado é um presente, e este site é só uma pequena forma de te lembrar o quanto eu te amo. Feliz Dia dos Namorados!
+    </p>
+</div>
+
+
+
+</body>
+</html>
+
+
